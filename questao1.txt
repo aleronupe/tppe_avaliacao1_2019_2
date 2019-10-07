@@ -1,0 +1,33 @@
+Aluno: Alexandre Miguel Rodrigues Nunes Pereira
+Matrícula: 16/0000840
+
+Questão 1:
+
+a) Diferencie interfaces públicas de interfaces publicadas e justifique por que interfaces publicadas não devem ser refatoradas.
+
+  Uma interface pública é uma interface que pode ser acessada de qualquer local do código, enquanto uma interface publicada é uma interface que passa a ser
+  utilizada por elementos externos, de forma que, existam códigos que não se possa encontrar e modificar, atuando como uma evolução da interface pública. Assim, interfaces publicadas não devem ser
+  refatoradas, usando a estratégia de manter duas interfaces para garantir o funcionamento. Como não é possível saber como cada cliente está utilizando
+  as interfaces públicas, ao refatorá-las, podem ser geradas falhas.
+
+b) Qual a diferença entre os maus cheiros "Cirurgia com rifle" e "Mudanças divergentes".
+Responda informando claramente os princípios de projetos que estão sendo violados em cada um dos maus-cheiros.
+
+  O mau cheiro "Mudanças Divergentes" representa uma classe que, ao ser refatorada, sofre diversas mudanças e alterações, provavelmete por também ser uma
+  classe grande, contrariando o princípio de que, de forma ideal, as alterações em classes ocorreriam de forma contida e pontual.
+  Já o mau cheiro "Cirurgia com Rifle" representa um oposto às mudanças divergentes, de forma que, uma mudança representa alterações em várias classes, sendo
+  até mesmo difícil se atentar a todos os locais afetados, tornando a refatoração passível de esquecimentos.
+
+c) Refatoração sempre leva a projetos mais eficientes em termo de desempenho. A afirmativa é verdadeira ou falsa? Justifique.
+
+  Falsa, pois, como o processo central da refatoração se concentra em modificar um sistema de forma que seu comportamento externo não seja alterado, mas que
+  a estrutura seja melhorada, o que não necessariamente melhora o desempenho ou torna o projeto mais eficiente, podendo manter esses aspectos ou, a depender da
+  refatoração, perde-se em alguns aspectos de desempenho, mas sempre busca-se melhorar o código, buscando tornar o código bem planejado, propiciando a refatoração
+  pontual e minimizar os bugs.
+
+
+d) Como se tem a garantia de que uma refatoração teve sucesso?
+
+  Ao seguir-se as métricas definidas de refatoração, bem como as mecânicas de refatoração, uma forma de verificar se a refatoração foi bem sucedida é verificar se o funcionamento
+  externo do sistema permanece o mesmo, ainda que sua estrutura interna tenha sido melhorada e refatorada. Uma boa forma de verificar isso, sendo inclusive aconcelhada e estruturada, é
+  a realização de testes que devem permanecer bem sucedidos após o término das refatorações.
